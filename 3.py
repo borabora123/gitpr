@@ -48,19 +48,19 @@ class MainWindow(QMainWindow):
         if event.key() == Qt.Key_PageUp:
             self.map_zoom = min(15, self.map_zoom + 1)
             self.refresh_map()
-        elif event.key() == Qt.Key_PageDown:
+        if event.key() == Qt.Key_PageDown:
             self.map_zoom = max(1, self.map_zoom - 1)
             self.refresh_map()
-        elif event.key() == Qt.Key_Up:
+        if event.key() == Qt.Key_Up:
             self.map_ll[1] += 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Down:
+        if event.key() == Qt.Key_Down:
             self.map_ll[1] -= 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Right:
+        if event.key() == Qt.Key_Right:
             self.map_ll[0] += 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Left:
+        if event.key() == Qt.Key_Left:
             self.map_ll[0] -= 1 / self.map_zoom ** 1.6
             self.refresh_map()
         event.accept()
