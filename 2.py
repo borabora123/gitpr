@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi('main_window.ui', self)
+        uic.loadUi('main_window_1-3.ui', self)
         self.press_delta = 0.00001
 
         self.map_zoom = 1
