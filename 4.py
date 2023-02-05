@@ -49,14 +49,14 @@ class MainWindow(QMainWindow):
         self.refresh_map()
 
     def click2(self):
-        self.map_l = 'sat'
+        self.map_l = 'skl'
         self.btn_sattel.setStyleSheet('QPushButton {background-color: #A3C1DA}')
         self.btn_scheme.setStyleSheet('QPushButton {background-color: white}')
         self.btn_hybr.setStyleSheet('QPushButton {background-color: white}')
         self.refresh_map()
 
     def click3(self):
-        self.map_l = 'skl'
+        self.map_l = 'sat'
         self.btn_hybr.setStyleSheet('QPushButton {background-color: #A3C1DA}')
         self.btn_sattel.setStyleSheet('QPushButton {background-color: white}')
         self.btn_scheme.setStyleSheet('QPushButton {background-color: white}')
@@ -89,16 +89,16 @@ class MainWindow(QMainWindow):
         elif event.key() == Qt.Key_PageDown:
             self.map_zoom = max(1, self.map_zoom - 1)
             self.refresh_map()
-        elif event.key() == Qt.Key_Up:
+        elif event.key() == Qt.Key_W:
             self.map_ll[1] += 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Down:
+        elif event.key() == Qt.Key_S:
             self.map_ll[1] -= 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Right:
+        elif event.key() == Qt.Key_D:
             self.map_ll[0] += 1 / self.map_zoom ** 1.6
             self.refresh_map()
-        elif event.key() == Qt.Key_Left:
+        elif event.key() == Qt.Key_A:
             self.map_ll[0] -= 1 / self.map_zoom ** 1.6
             self.refresh_map()
         event.accept()
